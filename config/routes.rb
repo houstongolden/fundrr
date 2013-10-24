@@ -5,7 +5,7 @@ Fundrr::Application.routes.draw do
   resources :users
   resources :authentications, only:[:new, :create, :delete]
   resources :groups
-  resources :secrets
+
 
   get "/logout", to: "authentications#destroy", as: "logout"
 
