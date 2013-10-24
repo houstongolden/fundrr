@@ -5,7 +5,8 @@ class User
   # :confirmable, :lockable, :timeoutable and :omniauthable
   include Mongoid::Document
 
-  field :name, type: String
+  field :first_name, type: String
+  field :last_name, type: String
   field :email, type: String
   field :salt, type: String
   field :hashed_password, type: String

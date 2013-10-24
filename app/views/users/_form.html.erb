@@ -1,22 +1,28 @@
 <%= form_for @user do |u| %>
+
+
 <p>
-	<%= u.label :name, "Name" %>
-	<%= u.text_field :name %>
+	<%= u.text_field :first_name, :placeholder => 'First Name' %>
 </p>
 
 <p>
-	<%= u.label :email, "Email" %>
-	<%= u.text_field :email %>
+	<%= u.text_field :last_name, :placeholder => 'Last Name' %>
+</p>
+
+
+<p>
+	
+	<%= u.text_field :email, :placeholder => 'Your Email' %>
 </p>
 
 <p>
-	<%= u.label :password, "Password" %>
-	<%= u.text_field :password %>
+	
+	<%= u.text_field :password, :placeholder => 'New Password' %>
 </p>
 
 <p>
-	<%= u.label :password_confirmation, "Password Confirmation" %>
-	<%= u.text_field :password_confirmation %>
+	
+	<%= u.text_field :password_confirmation, :placeholder => 'Re-enter Password' %>
 </p>
 
 <%= u.submit %>
