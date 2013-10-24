@@ -3,11 +3,15 @@ Fundrr::Application.routes.draw do
   
   root :to => 'pages#home'
   resources :users
+  resources :authentications, only:[:new, :create, :delete]
+  resources :groups
   # resources :pages
 
+  get "/logout", to: "authentications#destroy", as: "logout"
 
   get 'users/new' => 'users#new'
   post 'users' => 'users#create'
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -3,27 +3,36 @@
     <td>
       <h2>Crowdfunding the Future of Start Ups</h2>
 
-          <img alt="fundrr" style="text-align:center;" src="http://cloud-media.com/wp-content/uploads/2013/10/fundrr-banner-beta-2.png">
-            <p class='mb'>
-            Click the button below to connect your AngelList account.
-            </p>
-      <a href="#" class="btn-3d blue">Sign in via AngelList</a><a href="#" class="btn-3d green">Fundrr Founders</a></td>
-             
+        <img alt="fundrr" style="text-align:center;" src="http://cloud-media.com/wp-content/uploads/2013/10/fundrr-banner-beta-2.png">
+          <p class='mb'>
+          Click the button below to connect your AngelList account.
+          </p>
+
+        <%= link_to "Sign in via AngelList", "authentications/new", :class => "btn-3d blue" %>
+
+        <%= link_to "Fundrr Founders", "authentications/new", :class => "btn-3d green" %>
+               
     <td>
-                  <h2>Sign Up</h2>
+        <h2>Sign Up</h2>
 
           <div>
             <%= render 'users/form' %>
+          <p>
+            <% if current_user %>
+              <%= link_to current_user.email %>
+
+              <%= link_to "Log Out", "/logout", :class => "btn-3d blue" %>
+
+            <% end %>
+          </p>
+        
           </div>
 
-            <a href="/users/password/new">Forgot your password?</a><br />
-
     </td>
-    </tr>
-    </table> 
+  </tr>
+</table> 
   
-        <br />
-
+<br />
 <hr />
 
 

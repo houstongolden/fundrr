@@ -5,18 +5,23 @@ class User
   # :confirmable, :lockable, :timeoutable and :omniauthable
   include Mongoid::Document
 
+  attr_accessor :password, :password_confirmation
+
   field :first_name, type: String
   field :last_name, type: String
   field :email, type: String
   field :salt, type: String
   field :hashed_password, type: String
 
-  before_save :hash_password
-  validates :email, presence: true
-  validates_presence_of :name
-  validates_uniqueness_of :name, :email, :case_sensitive => false
+  # This will tell us what regions to show on the map
+  has_and_belongs_to_many :ugroups, class_name:"Group", inverse_of: :gusers
 
-  attr_accessor :password, :password_confirmation
+
+  validates :email, presence: true
+  validates_presence_of :first_name
+  validates_uniqueness_of :first_name, :email, :case_sensitive => false
+
+  before_save :hash_password  
 
  def authenticate(password)
   self.hashed_password ==
@@ -24,7 +29,6 @@ class User
  end
 
  private
-
  def hash_password
   if password.present?
     self.salt = BCrypt::Engine.generate_salt

@@ -1,0 +1,11 @@
+Sign in
+<br />
+<%= form_for @user, {url:"/authentications", method:"post"} do |u| %>
+	<%= u.label :email, "Email" %><%=u.text_field :email %><br />
+	
+	<%= u.label :password, "Password" %><%=u.text_field :password %><br />
+	<%= u.submit "Log In" %>
+<% end %>
+
+<hr />
+User id: <%= session[:user_id] %>

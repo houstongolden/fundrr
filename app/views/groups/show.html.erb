@@ -1,0 +1,18 @@
+<script>
+// Go ahead and load the above when the window is ready
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+
+<b><%= @group.name %></b><br />
+
+<% @group.gusers.each do |u| %>
+ <%= u.email %>
+ 	<% if u.email == current_user.email %>
+ 		<%= " It's me!!!!" %>
+ 	<% end %>
+ 	<%= x = 5 %>
+ <br />
+<% end %>
+
