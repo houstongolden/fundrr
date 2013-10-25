@@ -16,7 +16,6 @@ class User
   # This will tell us what regions to show on the map
   has_and_belongs_to_many :ugroups, class_name:"Group", inverse_of: :gusers
 
-
   validates :email, presence: true
   validates_presence_of :first_name
   validates_uniqueness_of :first_name, :email, :case_sensitive => false

@@ -1,4 +1,4 @@
-<%= form_for @user do |u| %>
+<%= form_for(@user, :html => { :class => "sign_up_form"} ) do |u| %>
 
 <p>
 	<%= u.text_field :first_name, :placeholder => 'First Name' %>

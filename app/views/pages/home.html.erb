@@ -3,7 +3,7 @@
     <td>
       <h2>Crowdfunding the Future of Start Ups</h2>
 
-        <img alt="fundrr" style="text-align:center;" src="http://cloud-media.com/wp-content/uploads/2013/10/fundrr-banner-beta-3.png">
+        <img alt="fundrr" style="text-align:center;" src="http://cloud-media.com/wp-content/uploads/2013/10/Fundrr-beta-banner-5.png">
           <p class='mb'>
           Click the button below to connect your AngelList account.
           </p>
@@ -13,10 +13,8 @@
         <%= link_to "Fundrr Founders", "authentications/new", :class => "btn-3d green" %>
                
     <td>
-        <h2>Sign Up</h2>
 
           <div>
-            <%= render 'users/form' %>
           <p>
             <% if current_user %>
               <%= link_to current_user.email %>
@@ -25,6 +23,10 @@
 
             <% end %>
           </p>
+          
+            <h2>Sign Up</h2>
+            <%= render 'users/form' %>
+
         
           </div>
 
