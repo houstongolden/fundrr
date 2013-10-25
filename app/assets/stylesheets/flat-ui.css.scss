@@ -946,6 +946,7 @@ fieldset[disabled] .btn-link:focus {
   z-index: 100;
   -webkit-transform: scale(1, 1);
   display: block\9;
+  font-family: 'Raleway', sans-serif;
 }
 .navbar .nav > li.active > a,
 .navbar .nav > li.active > a:hover,
@@ -954,17 +955,21 @@ fieldset[disabled] .btn-link:focus {
   color: #1abc9c;
   -webkit-box-shadow: none;
   box-shadow: none;
+  font-family: 'Raleway', sans-serif;
 }
 .navbar .nav > li:first-child {
   border-radius: 6px 6px 0 0;
+  font-family: 'Raleway', sans-serif;
 }
 .navbar .nav > li:last-child {
   border-radius: 0 0 6px 6px;
+  font-family: 'Raleway', sans-serif;
 }
 .navbar .nav > li > ul {
   padding-top: 35px;
   top: 100%;
   padding-left: 0;
+  font-family: 'Raleway', sans-serif;
 }
 .navbar .nav > li > ul:before {
   content: "";
@@ -977,6 +982,7 @@ fieldset[disabled] .btn-link:focus {
   top: 5px;
   width: 0;
   -webkit-transform: rotate(360deg);
+  font-family: 'Raleway', sans-serif;
 }
 .navbar .nav > li > ul li:hover ul {
   opacity: 1;
@@ -992,6 +998,7 @@ fieldset[disabled] .btn-link:focus {
   display: inline-block;
   font-weight: 700;
   font-size: 18px;
+  font-family: 'Raleway', sans-serif;
   line-height: 50px;
   padding: .2em 1em;
   text-align: center;
