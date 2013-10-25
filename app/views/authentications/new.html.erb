@@ -1,10 +1,16 @@
 <h2>Sign in</h2>
 <br />
 <%= form_for @user, {url:"/authentications", method:"post"} do |u| %>
-	<%= u.label :email, "Email" %><%=u.text_field :email %><br />
+
+	<%=u.text_field :email, :placeholder => 'Email', :class => "sign_up_text" %><br />
 	
-	<%= u.label :password, "Password" %><%=u.password_field :password %><br />
-	<%= u.submit "Log In", :class => 'sign_up_submit_btn' %>
+	<%=u.password_field :password, :placeholder => 'Password', :class => "sign_up_text" %>
+
+	<br />
+	
+	<%= u.submit "Log In", :class => 'btn-3d green' %>
+
+
 <% end %>
 
 <hr />
