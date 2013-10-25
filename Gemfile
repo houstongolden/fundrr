@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
+source 'https://rubygems.org'
+ruby '2.0.0'
 
 
 # Use SCSS for stylesheets
@@ -35,15 +37,17 @@ gem 'bcrypt-ruby'
 
 gem 'omniauth-angellist', :git => 'https://github.com/wasabit/omniauth-angellist.git'
 
-source 'https://rubygems.org'
-ruby '2.0.0'
-gem 'rails', '4.0.0'
-# gem 'sqlite3'
-gem 'rails_12factor', group: :production
+
 
 group :assets do
 gem 'twitter-bootstrap-rails'
 end 
+
+group :production do
+	gem 'thin'
+	gem 'rails_12factor'
+end
+
 
 
 gem 'mongoid', github: 'mongoid/mongoid'
