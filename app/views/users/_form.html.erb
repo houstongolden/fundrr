@@ -1,24 +1,24 @@
-<%= form_for(@user, :html => { :class => "sign_up_form"} ) do |u| %>
+<%= form_for @user do |u| %>
 
 <p>
-	<%= u.text_field :first_name, :placeholder => 'First Name' %>
+	<%= u.text_field :first_name, :placeholder => 'First Name', class: "sign_up_text" %>
 </p>
 
 <p>
-	<%= u.text_field :last_name, :placeholder => 'Last Name' %>
+	<%= u.text_field :last_name, :placeholder => 'Last Name', class: "sign_up_text" %>
 </p>
 
 
 <p>
-	<%= u.text_field :email, :placeholder => 'Your Email' %>
+	<%= u.text_field :email, :placeholder => 'Your Email', class: "sign_up_text" %>
 </p>
 
 <p>
-	<%= u.password_field :password, :placeholder => 'New Password' %>
+	<%= u.password_field :password, :placeholder => 'New Password', class: "sign_up_text" %>
 </p>
 
 <p>
-	<%= u.password_field :password_confirmation, :placeholder => 'Re-enter Password' %>
+	<%= u.password_field :password_confirmation, :placeholder => 'Re-enter Password', class: "sign_up_text" %>
 </p>
 
 <%= u.submit 'Sign Up', :class => "btn-3d red" %>
