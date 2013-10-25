@@ -3,7 +3,7 @@ Fundrr::Application.routes.draw do
   
   root :to => 'pages#home'
   resources :users
-  resources :authentications, only:[:new, :create, :delete]
+  resources :authentications, only:[:new, :id, :email, :show, :create, :delete]
   resources :groups
 
 
@@ -11,6 +11,7 @@ Fundrr::Application.routes.draw do
 
   get 'users/new' => 'users#new'
   post 'users' => 'users#create'
+
  
 
   # The priority is based upon order of creation: first created -> highest priority.
